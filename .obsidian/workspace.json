@@ -1,0 +1,227 @@
+{
+  "main": {
+    "id": "c529e053087aafdf",
+    "type": "split",
+    "children": [
+      {
+        "id": "de88e48ec54899ba",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5be1ea60f562edd2",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4ea1525cee60b1c3",
+    "type": "split",
+    "children": [
+      {
+        "id": "b0f665cd312ce65c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4f38851b0cbcc664",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "fe8c4bf7bb573f85",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "cfe29592536c1d4e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 238.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "19535e261b2dbe39",
+    "type": "split",
+    "children": [
+      {
+        "id": "31affa2f3061d163",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cc9067f2ab5c9298",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Welcome.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "3c073e07aa409153",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Welcome.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "3ee7af1122044019",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "baad4ab093f6a330",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "fd8ad37176e57648",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Welcome.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "5be1ea60f562edd2",
+  "lastOpenFiles": [
+    "Second Brain Setup Report.md",
+    "06 Meetings/Meetings Index.md",
+    "05 Decisions/Decisions Index.md",
+    "04 Resources/CodeCraft API.md",
+    "04 Resources/OpenRouter.md",
+    "04 Resources/Codex CLI.md",
+    "04 Resources/OpenCode Setup.md",
+    "04 Resources/Ollama Local Models.md",
+    "04 Resources/Chatwoot.md",
+    "04 Resources/MT5 Broker Setup.md",
+    "04 Resources/Server Troubleshooting.md",
+    "04 Resources/Debian Commands.md",
+    "03 Areas/Compliance.md",
+    "03 Areas/Finance Reports.md",
+    "03 Areas/Marketing and SEO.md",
+    "03 Areas/Website Management.md",
+    "03 Areas/IT Infrastructure.md",
+    "03 Areas/Brokerage Operations.md",
+    "02 Projects/Obsidian Second Brain.md",
+    "02 Projects/Windows VPS Trading Setup.md",
+    "02 Projects/CurrentDesk CRM Evaluation.md",
+    "02 Projects/SEO Automation Ecosystem.md",
+    "02 Projects/RocoBroker Website.md",
+    "01 Daily Notes/2026-09-17.md",
+    "AI Tools MOC.md",
+    "Server & Infrastructure MOC.md",
+    "09 Attachments",
+    "08 Archive",
+    "07 Templates",
+    "06 Meetings",
+    "05 Decisions",
+    "04 Resources",
+    "03 Areas",
+    "02 Projects",
+    "01 Daily Notes",
+    "00 Inbox"
+  ]
+}
