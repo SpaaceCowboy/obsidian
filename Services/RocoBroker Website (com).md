@@ -4,7 +4,7 @@ server: "[[Host1]]"
 status: running
 url: https://rocobroker.com
 port:
-deployed: 
+deployed: 2026-10-26
 repo: https://github.com/SpaaceCowboy/roco-w.git
 ---
 # RocoBroker Website (com)
@@ -12,6 +12,8 @@ repo: https://github.com/SpaaceCowboy/roco-w.git
 Main site. Project: [[RocoBroker Website]].
 
 ## How to deploy / update
+
+Build a new release dir under `/opt/rocobroker-releases/` from `main` (upload a `git archive`; the VPS has no GitHub credentials), preview on port 3199, repoint `/opt/rocobroker-next/.next`, `pm2 restart rocobroker-next` (no `--update-env`). Full steps and rollback: `currentstate.md` in roco-w.
 
 ```sh
 
@@ -25,3 +27,4 @@ Main site. Project: [[RocoBroker Website]].
 
 - 2026-10-25: Added
 - 2026-10-26: GA4 tracking regression found by [[Roco SEO]]: rocobroker.com sessions in GA4 property 477009914 fell from ~50–120/day to ~1/day on 2026-09-13, and the live /fa HTML and script bundles load no gtag/GTM tag. Restore the tag; lost days cannot be backfilled. PageSpeed homepage also dropped from mobile 0.96 / desktop 1.00 (2026-10-15) to 0.34 (LCP 29.6 s) / 0.58 (2026-10-26). Single sample, needs a re-check.
+- 2026-10-26: Deployed `b228752` (GA4 after analytics consent) as `/opt/rocobroker-releases/ga4-b228752`; rollback target `seo-audit-b0346f0`. Recovered unpushed production commits 5a017fd/3dd691e/b0346f0 into git `main` first, which was behind the live site. Accept analytics in the cookie banner to confirm GA4 realtime hits.
