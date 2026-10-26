@@ -2,7 +2,7 @@
 type: project
 status: active
 phase: 7.5 / 8
-next: Item 3 needs a calibration decision (both opportunities below AI floor 75); website fixes (GA4 tag, wp redirect, poster, broken links) after owner confirms; see docs/READINESS.md
+next: Readiness item 4 (real human review of a draft through approval, ledger and measurement); calibration follow-ups for internal links; see docs/READINESS.md
 due:
 repo: https://github.com/SpaaceCowboy/seo-automation
 local: C:\Users\shayan\Documents\ChatGPT\roco-seo
