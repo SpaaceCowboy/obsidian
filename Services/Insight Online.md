@@ -26,3 +26,4 @@ Server paths (from DEPLOYMENT.md): `/opt/insight-online` (backups in `/opt/insig
 
 - 2026-10-25: Added
 - 2026-10-26: Published Android v0.2.13 at the existing APK URL. Backend, migration 010 and store-only feedback remain unchanged. Previous v0.2.12 APK retained under /root/insight-apk-rollbacks/INSIGHT-online-v0.2.12-before-paging.apk.
+- 2026-10-26: Published Android v0.2.14; retained /root/insight-apk-rollbacks/INSIGHT-online-v0.2.13-before-sheets.apk. Backend remains healthy with 13 accounts, 126 puzzles and all 80 seed puzzles; migration 010 and stored feedback unchanged. VPS test processes stopped.
