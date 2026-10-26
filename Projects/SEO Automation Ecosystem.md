@@ -2,7 +2,7 @@
 type: project
 status: active
 phase: 7.5 / 8
-next: Restore GA4 tag on rocobroker.com; confirm first scheduled Google imports; then readiness items 2–6 (docs/READINESS.md). Phase 8 and specialist agents need separate approval
+next: Item 3 needs a calibration decision (both opportunities below AI floor 75); website fixes (GA4 tag, wp redirect, poster, broken links) after owner confirms; see docs/READINESS.md
 due:
 repo: https://github.com/SpaaceCowboy/seo-automation
 local: C:\Users\shayan\Documents\ChatGPT\roco-seo
