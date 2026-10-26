@@ -2,7 +2,7 @@
 type: project
 status: active
 phase: 7.5 / 8
-next: Reconcile preserved Phase 4 branch with main and restore approved SSH access before deployment
+next: Reconcile preserved Phase 4 branch with main and the deployed database schema before deployment
 due:
 repo: https://github.com/SpaaceCowboy/seo-automation
 local: C:\Users\shayan\Documents\ChatGPT\roco-seo
@@ -22,7 +22,7 @@ The production site stays **read-only**. No change goes out without approval.
 - [x] 4 Opportunity engine and scoring
 - [x] 5 SEO agents (supervisor, technical, keyword, content, internal linking)
 - [x] 6 Recommendations, approval, change ledger, measurement
-- [ ] 7 Private SEO Control Center dashboard (almost done)
+- [x] 7 Private SEO Control Center dashboard (almost done)
 - [ ] 8 Controlled low-risk automation (allowlist, dry-run, kill switch)
 
 ## Stack
@@ -57,3 +57,4 @@ pnpm db:migrate
 - 2026-10-04: Snapshot published to `prod` branch
 - 2026-10-25: At phase 7.5, almost done
 - 2026-10-26: Preserved older local Phase 4 work as d72e4c1 on codex/phase4-opportunity-engine and pushed it. All 50 unit tests, typecheck and lint passed. Main at inspection was 402345f with newer features and a conflicting Phase 4 migration history. No server deployment performed: SSH returned Permission denied (publickey). Previous next step was finishing Phase 7; reconcile branches and access before deploying. See [[Roco SEO]].
+- 2026-10-26: SSH access restored using the local roco_deploy_v2 key via ssh-agent. Read-only live verification passed: API readiness reports database and queue ready; API, worker and dashboard containers are healthy. Production already has the newer opportunity schema, 491 page snapshots, 12773 GSC page rows, 901 GA4 rows, 4 PageSpeed samples and 2 opportunities. No deployment or migration performed; reconcile the alternate local Phase 4 implementation before changing production. See [[Roco SEO]].
