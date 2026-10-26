@@ -2,7 +2,7 @@
 type: project
 status: active
 phase: 7.5 / 8
-next: Reconcile preserved Phase 4 branch with main and the deployed database schema before deployment
+next: Restore GA4 tag on rocobroker.com; confirm first scheduled Google imports; then readiness items 2–6 (docs/READINESS.md). Phase 8 and specialist agents need separate approval
 due:
 repo: https://github.com/SpaaceCowboy/seo-automation
 local: C:\Users\shayan\Documents\ChatGPT\roco-seo
@@ -45,7 +45,7 @@ pnpm db:migrate
 
 - Server: [[Crawler VPS]] (31.57.24.70)
 - Domain: https://scc.rocobroker.com · service note: [[Roco SEO]]
-- Deploy method: 
+- Deploy method: Tested main source archive, versioned Docker image and reversible Compose rollout; current code release c9a854f. See [[Roco SEO]].
 
 ## Docs (in repo)
 
@@ -58,3 +58,5 @@ pnpm db:migrate
 - 2026-10-25: At phase 7.5, almost done
 - 2026-10-26: Preserved older local Phase 4 work as d72e4c1 on codex/phase4-opportunity-engine and pushed it. All 50 unit tests, typecheck and lint passed. Main at inspection was 402345f with newer features and a conflicting Phase 4 migration history. No server deployment performed: SSH returned Permission denied (publickey). Previous next step was finishing Phase 7; reconcile branches and access before deploying. See [[Roco SEO]].
 - 2026-10-26: SSH access restored using the local roco_deploy_v2 key via ssh-agent. Read-only live verification passed: API readiness reports database and queue ready; API, worker and dashboard containers are healthy. Production already has the newer opportunity schema, 491 page snapshots, 12773 GSC page rows, 901 GA4 rows, 4 PageSpeed samples and 2 opportunities. No deployment or migration performed; reconcile the alternate local Phase 4 implementation before changing production. See [[Roco SEO]].
+- 2026-10-26: Reconciled alternate Phase 4 work with main and recovered deployed staff-auth, integration-status, Google/AI and dashboard fixes. Pushed code commit c9a854f and deployed image roco-seo:staff-main-c9a854f to API/worker/dashboard with no production migration. All 187 unit, 35 database integration and 4 browser tests pass. Live authenticated reads and a deduplicated opportunities-v2 run pass; original source counts and two opportunities are preserved. Main is the clean deployment checkout; local master removed, reference Phase 4 branch retained. Current Google imports last succeeded October 15, so refresh evidence before calibration. Full report: docs/MAIN_RECONCILIATION_2026-10-26.md in the repo. See [[Roco SEO]] and [[SEO manual ledger timestamp validation]].
+- 2026-10-26: Audit: phases 1–7 live, 7.5 not yet accepted. Readiness checklist in docs/READINESS.md. Item 1 started: GSC current to 2026-10-23, PageSpeed refreshed, Google schedules enabled. GA4 blocked because the website lost its tag on 2026-09-13. Specialist agents (Keyword+Technical first) proposed only after all 7.5 items are verified. See [[Roco SEO]].
