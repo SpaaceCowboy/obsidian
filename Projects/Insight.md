@@ -1,7 +1,7 @@
 ---
 type: project
 status: active
-version: Android v0.2.16 (code 27)
+version: Android v0.2.17 (code 28)
 next:
 due:
 repo: https://github.com/SpaaceCowboy/project-insight
@@ -19,13 +19,13 @@ Tile-swapping puzzle game. Each colour moves in its own fixed direction, and you
 | Android app (Kotlin + Jetpack Compose) | `Documents\ChatGPT\insight-android\project-insight` |
 | Online backend (TypeScript + PostgreSQL) | `server/` in the Android repo → runs on [[Insight Online]] |
 
-- APK download: https://13.140.89.146/INSIGHT-online.apk?v=0.2.16
+- APK download: https://13.140.89.146/INSIGHT-online.apk?v=0.2.17
 - Private test, no billing, not on the Play Store yet.
 - Release notes: `DEPLOYMENT.md` in the Android repo.
 
 ## Tasks
 
-- [ ] Check v0.2.16 gestures and haptics on a physical phone; this was not covered by release validation.
+- [ ] Check v0.2.17 gestures and haptics on a physical phone; this was not covered by release validation.
 
 ## Release verification
 
@@ -41,3 +41,5 @@ Run Android emulators on [[Insight VPS]] only, never on the local PC (user prefe
 - 2026-10-26: v0.2.15 (code 26) and matching backend deployed: raised board platforms, bounded tile dragging, responsive press feedback and 24-item discovery. Fixed consumed-down press cancellation and updated pagination fixtures. VPS unit, preview, compact, online and signed-upgrade tests passed; physical-phone checks remain outstanding.
 
 - 2026-10-27: v0.2.16 (code 27) and matching backend deployed: creator resize memory and phase morphs, anchored puzzle code menus, seven-row bookmarks, media volume for effects and 20-character new usernames. VPS validation passed: 44 unit, 21 preview, four compact, six online tests and signed upgrade preserving progress. Updated publishing test to open the actual puzzle card. Physical-phone checks remain outstanding.
+
+- 2026-10-27: v0.2.17 (code 28) and matching backend deployed: five UI languages, first-play guide, startup splash, adjusted audio, shared username validation, ten new puzzles per UTC day and 28-item bookmarks. Fixed two compile issues and aligned device tests with splash timing and outline-only swipe zones. VPS checks passed: 55 unit, 22 preview, four compact, six online tests and signed upgrade preserving progress. Physical-phone, Android 12+ splash appearance and native-speaker review remain outstanding.
