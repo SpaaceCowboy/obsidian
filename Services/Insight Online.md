@@ -9,7 +9,7 @@ repo: https://github.com/SpaaceCowboy/project-insight
 ---
 # Insight Online
 
-Backend for the Insight Android game (accounts, community puzzles), plus the public APK download at `/INSIGHT-online.apk`. Project: [[Insight]].
+Backend for Midori (formerly Insight) (accounts, community puzzles), plus the public APK download at `/INSIGHT-online.apk`. Project: [[Insight]].
 Server paths (from DEPLOYMENT.md): `/opt/insight-online` (backups in `/opt/insight-online/backups`), release stages `/opt/insight-release-*`, old APKs in `/root/insight-apk-rollbacks`.
 
 ## How to deploy / update
@@ -32,3 +32,5 @@ Server paths (from DEPLOYMENT.md): `/opt/insight-online` (backups in `/opt/insig
 - 2026-10-27: Deployed username-validation backend and Android v0.2.16. Existing accounts preserved; no migration and feedback remains store-only. Encrypted backup insight-20261027T100417Z.dump.age restored before rollout, with a fresh backup immediately before deployment. Previous runtime: /opt/insight-rollback-before-036; previous APK: /root/insight-apk-rollbacks/INSIGHT-online-v0.2.15-before-creator-memory.apk. Public checksum and live health verified: 13 users, 127 puzzles, all 80 seed puzzles. VPS test processes stopped and isolated test database dropped.
 
 - 2026-10-27: Deployed Android v0.2.17 and backend username validation, UTC daily publishing limit and optional 28-item grid pages. No migration; existing accounts and stored feedback preserved. Encrypted backup insight-20261027T184149Z.dump.age restored before rollout, then a fresh backup ran before deployment. Previous runtime: /opt/insight-rollback-before-037; previous APK: /root/insight-apk-rollbacks/INSIGHT-online-v0.2.16-before-languages.apk. Public checksum and live health verified with 13 users, 129 puzzles and all 80 seed puzzles. VPS test processes stopped; isolated test database dropped.
+
+- 2026-10-28: Deployed Midori v0.2.18 with level badges and case-insensitive share-code list search. No migration; existing app identity/data and stored feedback preserved. Encrypted backup insight-20261028T125110Z.dump.age restored before rollout; fresh backup also ran before deployment. Previous runtime: /opt/insight-rollback-before-038; previous APK: /root/insight-apk-rollbacks/INSIGHT-online-v0.2.17-before-midori.apk. Public checksum and health verified with 14 users, 140 puzzles and all 80 seed puzzles. VPS tests stopped and isolated database dropped.

@@ -1,7 +1,7 @@
 ---
 type: project
 status: active
-version: Android v0.2.17 (code 28)
+version: Midori Android v0.2.18 (code 29)
 next:
 due:
 repo: https://github.com/SpaaceCowboy/project-insight
@@ -9,7 +9,7 @@ local: C:\Users\shayan\Documents\ChatGPT\insight-android\project-insight
 ---
 # Insight
 
-Tile-swapping puzzle game. Each colour moves in its own fixed direction, and you swap tiles until the board matches the target. 200-level campaign, plus accounts, community puzzles, a puzzle creator, XP and social features.
+Midori (formerly Insight), a tile-swapping puzzle game. Each colour moves in its own fixed direction, and you swap tiles until the board matches the target. 200-level campaign, plus accounts, community puzzles, a puzzle creator, XP and social features.
 
 ## Parts
 
@@ -19,13 +19,13 @@ Tile-swapping puzzle game. Each colour moves in its own fixed direction, and you
 | Android app (Kotlin + Jetpack Compose) | `Documents\ChatGPT\insight-android\project-insight` |
 | Online backend (TypeScript + PostgreSQL) | `server/` in the Android repo → runs on [[Insight Online]] |
 
-- APK download: https://13.140.89.146/INSIGHT-online.apk?v=0.2.17
+- APK download: https://13.140.89.146/INSIGHT-online.apk?v=0.2.18
 - Private test, no billing, not on the Play Store yet.
 - Release notes: `DEPLOYMENT.md` in the Android repo.
 
 ## Tasks
 
-- [ ] Check v0.2.17 gestures and haptics on a physical phone; this was not covered by release validation.
+- [ ] Check v0.2.18 gestures and haptics on a physical phone; this was not covered by release validation.
 
 ## Release verification
 
@@ -43,3 +43,5 @@ Run Android emulators on [[Insight VPS]] only, never on the local PC (user prefe
 - 2026-10-27: v0.2.16 (code 27) and matching backend deployed: creator resize memory and phase morphs, anchored puzzle code menus, seven-row bookmarks, media volume for effects and 20-character new usernames. VPS validation passed: 44 unit, 21 preview, four compact, six online tests and signed upgrade preserving progress. Updated publishing test to open the actual puzzle card. Physical-phone checks remain outstanding.
 
 - 2026-10-27: v0.2.17 (code 28) and matching backend deployed: five UI languages, first-play guide, startup splash, adjusted audio, shared username validation, ten new puzzles per UTC day and 28-item bookmarks. Fixed two compile issues and aligned device tests with splash timing and outline-only swipe zones. VPS checks passed: 55 unit, 22 preview, four compact, six online tests and signed upgrade preserving progress. Physical-phone, Android 12+ splash appearance and native-speaker review remain outstanding.
+
+- 2026-10-28: Midori v0.2.18 (code 29) and matching backend deployed; package, signing key and saved data retained. Added tap-through tips, single-touch transition handling, deeper controls, more achievements and list-based share-code search. Fixed profile level badges to agree with progress. VPS checks passed: 55 unit, 22 preview, four compact, six online, signed upgrade, 18 server unit and 20 integration tests. Physical-phone and native-speaker checks remain outstanding.
