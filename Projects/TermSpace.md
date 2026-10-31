@@ -1,7 +1,7 @@
 ---
 type: project
 status: active
-next:
+next: Design direction phase 2 — per-page restyle (landing eyebrow/pastel sections, dashboard density) on branch v.3, then push phase 1
 due:
 repo: https://github.com/boyInShadows/termSpace
 local: C:\Users\shayan\Documents\ChatGPT\termSpace
@@ -38,3 +38,4 @@ Community platform for discovering and publishing agentic coding tools: skills, 
 - 2026-10-24: Startup performance work: precompressed assets, reporting bundle budget
 - 2026-10-25: Recorded rejected startup performance trials (last commit)
 - 2026-10-25: Recorded public HTTPS preview with automatic certificate renewal, replacing the private SSH-tunnel-only access note. Source: Codex chat Fetch latest from ramtin.
+- 2026-10-31: Design direction phase 1 committed on branch v.3 (not pushed): navy/paper tokens, 12px controls / 16px cards, light panel shadows, pill chips, pastel tints, shared components; `apps/web/DESIGN.md` rewritten from "The Datasheet" to "Paper & Signal" (inspired by anicards.ir, not copied).
