@@ -1,7 +1,7 @@
 ---
 type: project
 status: active
-version: Midori Android v0.2.18 (code 29)
+version: Midori Android v0.2.19 (code 30)
 next:
 due:
 repo: https://github.com/SpaaceCowboy/project-insight
@@ -45,3 +45,4 @@ Run Android emulators on [[Insight VPS]] only, never on the local PC (user prefe
 - 2026-10-27: v0.2.17 (code 28) and matching backend deployed: five UI languages, first-play guide, startup splash, adjusted audio, shared username validation, ten new puzzles per UTC day and 28-item bookmarks. Fixed two compile issues and aligned device tests with splash timing and outline-only swipe zones. VPS checks passed: 55 unit, 22 preview, four compact, six online tests and signed upgrade preserving progress. Physical-phone, Android 12+ splash appearance and native-speaker review remain outstanding.
 
 - 2026-10-28: Midori v0.2.18 (code 29) and matching backend deployed; package, signing key and saved data retained. Added tap-through tips, single-touch transition handling, deeper controls, more achievements and list-based share-code search. Fixed profile level badges to agree with progress. VPS checks passed: 55 unit, 22 preview, four compact, six online, signed upgrade, 18 server unit and 20 integration tests. Physical-phone and native-speaker checks remain outstanding.
+- 2026-10-31: Midori v0.2.19 (code 30) and matching backend deployed: tip text plates and shrink-to-fit lines, continuous player list, adaptive Journey pages, steady discovery cards on refresh, zen streaming ambience and an expanded username word list with 6→g. No migration. VPS checks passed: 61 Android unit tests, the guide/language device regression, signed v0.2.18→v0.2.19 upgrade, 18 server unit and 20 integration tests. Physical-phone checks and the full device suite remain outstanding.
