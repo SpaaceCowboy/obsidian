@@ -5,7 +5,7 @@ ip: 31.57.92.100
 os: Ubuntu 24.04
 cost:
 renews:
-access: password manager → TermSpace VPS root (password auth; 1 vCPU, 2 GB RAM + 3 GB swap, 19 GB disk)
+access: password manager → TermSpace VPS root (password auth; 2 vCPU, 4 GB RAM, 40 GB disk)
 ---
 # TermSpace VPS
 
@@ -32,10 +32,11 @@ views:
 ## Notes
 
 - Firewall (ufw): 22, 80, 443 only. Docker, Caddy (apt) installed.
-- Disk is tight: 19 GB, about 86% used after a deploy. Docker images are ~3 GB each (api, migrate, scheduler, worker, web) plus build cache; a web build needs ~3 GB free. Owner plans to upgrade the server.
+- Upgraded to 2 vCPU / 4 GB / 40 GB (owner-reported). Docker images are now ~0.7 GB (api, shared by migrate/scheduler/workers) and ~1.1 GB (web, blog), down from ~3 GB each. Run `docker builder prune -af` if disk gets tight.
 - Upload from the local PC to this host was ~3 KB/s through a tar pipe; clone from GitHub on the server instead and send small patches.
 
 ## Log
 
 - 2026-11-01: Added. Replaced the unreachable 94.183.191.96.
 - 2026-11-01: Disk reached 100% during a web build; freed 8 GB of build cache (now 86% used after the deploy). Upgrade planned by owner.
+- 2026-11-01: Owner upgraded the VPS to 2 vCPU, 4 GB RAM, 40 GB disk (was 1 vCPU, 2 GB, 19 GB).

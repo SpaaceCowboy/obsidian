@@ -18,11 +18,11 @@ Code lives in `/opt/termspace` (clone of branch v.3), config in `/opt/termspace/
 ```sh
 cd /opt/termspace
 git fetch origin && git reset --hard origin/v.3   # reset only after `git diff HEAD <pushed commit>` is empty (server may hold a local patch commit)
-docker compose build api && docker compose build web   # one at a time, 2 GB RAM; web-only changes need only `build web`
+docker compose build api && docker compose build web   # one at a time; web-only changes need only `build web`. api image is shared by migrate, scheduler and the workers, so build api before `up`
 docker compose up -d db redis migrate api web scheduler marketplace-source-worker
 ```
 
-A web rebuild needs about 3 GB of free disk. If `df -h /` shows more than ~80% used, run `docker builder prune -af` first (build cache only; the next build is slower). The `RUN chown -R` step in the Dockerfiles duplicates `node_modules` and makes images large.
+Images are slim since the Dockerfile rewrite (api ~0.7 GB, web/blog ~1.1 GB: production-only node_modules, `COPY --chown`). If `df -h /` shows more than ~80% used, run `docker builder prune -af` first (build cache only; the next build is slower). The API image has no `tsx`: grant roles with `docker compose exec api node apps/api/dist/scripts/manageMarketplaceRole.js grant --email … --role creator|moderator|administrator --actor ops:<id> --reason "…"`.
 
 ## Notes
 
@@ -35,3 +35,4 @@ A web rebuild needs about 3 GB of free disk. If `df -h /` shows more than ~80% u
 
 - 2026-11-01: Deployed v.3 at 49b2e50 (cb55e8b from GitHub plus unpushed commit applied as a patch); 35 migrations applied; public HTTPS checked through Cloudflare.
 - 2026-11-01: Deployed v.3 at ee4eb2b (simplified creator listing editor, web image only, no migrations). Server checkout reset to origin/v.3, replacing the local patch commit 49b2e50 (identical tree to pushed 82a39f3). Disk hit 100% mid-build; fixed with `docker builder prune -af`. Site, /explore and the editor route return 200.
+- 2026-11-01: Dockerfiles slimmed in commit 2c1c482 on v.3 (not yet deployed to the VPS at the time of writing): api 3.28 GB to 685 MB, web/blog 3.1 GB to 1.06 GB, workers share one api image.
