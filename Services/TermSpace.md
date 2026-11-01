@@ -4,7 +4,7 @@ server: "[[TermSpace VPS]]"
 status: running
 url: https://termspace.dev
 port: 3000
-deployed: 2026-11-01
+deployed: 2026-11-02
 repo: https://github.com/boyInShadows/termSpace
 ---
 # TermSpace
@@ -36,3 +36,4 @@ Images are slim since the Dockerfile rewrite (api ~0.7 GB, web/blog ~1.1 GB: pro
 - 2026-11-01: Deployed v.3 at 49b2e50 (cb55e8b from GitHub plus unpushed commit applied as a patch); 35 migrations applied; public HTTPS checked through Cloudflare.
 - 2026-11-01: Deployed v.3 at ee4eb2b (simplified creator listing editor, web image only, no migrations). Server checkout reset to origin/v.3, replacing the local patch commit 49b2e50 (identical tree to pushed 82a39f3). Disk hit 100% mid-build; fixed with `docker builder prune -af`. Site, /explore and the editor route return 200.
 - 2026-11-01: Dockerfiles slimmed in commit 2c1c482 on v.3 (not yet deployed to the VPS at the time of writing): api 3.28 GB to 685 MB, web/blog 3.1 GB to 1.06 GB, workers share one api image.
+- 2026-11-02: Deployed v.3 at 0166768: slim images (api 685 MB, web 1.06 GB) and plain link listings (migration 202611010003). Site, health and editor route return 200. Old images kept as termspace-web:prev and termspace-api:prev for rollback; the old 3.28 GB migrate, scheduler and worker images can be removed. Account termbuddy@termspace.dev registered, email verified by hand in the database; creator profile and listings not created yet.
