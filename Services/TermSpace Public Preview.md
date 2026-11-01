@@ -1,7 +1,7 @@
 ---
 type: service
 server: "[[Insight VPS]]"
-status: running
+status: retired
 url: https://termspace.13.140.89.146.sslip.io/
 port:
 deployed:
@@ -25,3 +25,4 @@ Use the current deployment instructions in the TermSpace checkout; commands were
 ## Log
 
 - 2026-10-25: Created
+- 2026-11-01: Retired: 13.140.89.146 stopped answering for this site; replaced by [[TermSpace]] on [[TermSpace VPS]].
