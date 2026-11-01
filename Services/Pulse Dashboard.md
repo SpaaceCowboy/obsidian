@@ -7,9 +7,9 @@ port: 443
 deployed: 2026-11-01
 repo:
 ---
-# Pulse
+# Pulse Dashboard
 
-Self-hosted health-check dashboard (project: [[Pulse]]). Compose stack: `web` (Next.js), `worker` (scheduler, checkers, alerting), `postgres:16`, `redis:7`, `caddy` (Let's Encrypt for pulse.termspace.dev, DNS-only record in Cloudflare).
+Self-hosted health-check dashboard (project: [[Pulse]], the project note). Compose stack: `web` (Next.js), `worker` (scheduler, checkers, alerting), `postgres:16`, `redis:7`, `caddy` (Let's Encrypt for pulse.termspace.dev, DNS-only record in Cloudflare).
 
 ## How to deploy / update
 

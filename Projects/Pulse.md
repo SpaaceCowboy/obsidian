@@ -8,7 +8,7 @@ local: C:\Users\shayan\Documents\projects\pulse
 ---
 # Pulse
 
-Self-hosted health-check dashboard for every deployed service: checks from two vantage points, Telegram alerts routed by role (ADMIN sees all, USER sees Roco targets), heartbeats, 90-day uptime. Deployed as [[Pulse]] on [[Pulse VPS]]. Plan: `docs/PLAN.md` in the repo; each phase ends with `PHASE_<N>_NOTES.md`.
+Self-hosted health-check dashboard for every deployed service: checks from two vantage points, Telegram alerts routed by role (ADMIN sees all, USER sees Roco targets), heartbeats, 90-day uptime. Deployed as [[Pulse Dashboard]] on [[Pulse VPS]]. Plan: `docs/PLAN.md` in the repo; each phase ends with `PHASE_<N>_NOTES.md`.
 
 ## Tasks
 

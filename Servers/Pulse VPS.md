@@ -11,7 +11,7 @@ access: ssh deploy@185.92.183.106 with key (root password login still enabled, s
 ---
 # Pulse VPS
 
-Core stack for [[Pulse]] (hostname `pulse-termspace-dev`). Docker Compose project `pulse` under `/opt/pulse`.
+Core stack for [[Pulse Dashboard]] (project: [[Pulse]]) (hostname `pulse-termspace-dev`). Docker Compose project `pulse` under `/opt/pulse`.
 
 ## Services on this server
 
