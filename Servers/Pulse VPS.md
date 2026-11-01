@@ -42,3 +42,4 @@ views:
 ## Log
 
 - 2026-11-01: Created. Bootstrapped with `deploy/bootstrap.sh` (Docker 29, deploy user, ufw, swap). First choice 31.59.120.14 was unreachable from the dev machine, so this server is used instead.
+- 2026-11-01: Released dbe4dfa (targets only). Note: none of the local SSH keys authenticate as `deploy`; deploys were run from root with `runuser -u deploy -- /opt/pulse/deploy.sh`.

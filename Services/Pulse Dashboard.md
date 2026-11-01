@@ -27,11 +27,13 @@ ssh deploy@185.92.183.106 "/opt/pulse/deploy.sh /tmp/pulse-$TAG.tar.gz"
 ## Notes
 
 - Alerts are OFF (`ALERTS_ENABLED=false` in `/opt/pulse/.env`) until a Telegram bot token is set. Incidents are still recorded.
-- No user account existed at deploy time. Create one with `pnpm user create <email> --role ADMIN` (see deploy/README.md).
+- One ADMIN account exists (`shayan.shoeibzadeh69@gmail.com`, TOTP linked).
 - Second vantage (probe) not deployed yet: HostVDS runs `deploy/probe/` with the same `HMAC_INGEST_SECRET`.
-- Open incidents seen from this server on day one: termspace (sslip.io certificate name mismatch) and roco-email SMTP 465 timeout.
-- Monitoring: Caddy and every container have healthchecks; no external watchdog configured yet (`WATCHDOG_URL`).
+- `roco-email` SMTP is probe-only: 25/465/587 to mail.rocobroker.com all time out from this server.
+- Monitoring: Caddy and every container have healthchecks; the dashboard checks its own `/api/healthz` + certificate. No external watchdog configured yet (`WATCHDOG_URL`).
+- `targets.yaml` is baked into the worker image — any target/check change needs a release, not just a restart.
 
 ## Log
 
 - 2026-11-01: Deployed release d7cac5d, then 7119deb (Caddy healthcheck fix: http→https redirect made the IP-based probe fail on a real domain). Migrations 0001–0003 applied, certificate issued, anonymous access verified closed (401/redirect).
+- 2026-11-01: Deployed dbe4dfa: termspace moved to `https://termspace.dev` (no Arabic; `/en` still 404s), SMTP check moved to the `hostvds` vantage, added self-monitoring (`pulse-dashboard` json + tls). Closed the 4 stale incidents; open incidents now 0. Created the `roco-seo` heartbeat (grace 25 h, follows the daily 04:15/04:45 UTC jobs) — the push URL was handed to the owner once, only its hash is stored.
