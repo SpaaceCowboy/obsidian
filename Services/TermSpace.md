@@ -17,10 +17,12 @@ Code lives in `/opt/termspace` (clone of branch v.3), config in `/opt/termspace/
 
 ```sh
 cd /opt/termspace
-git pull                       # or git am a small patch for unpushed commits
-docker compose build api && docker compose build web   # one at a time, 2 GB RAM
+git fetch origin && git reset --hard origin/v.3   # reset only after `git diff HEAD <pushed commit>` is empty (server may hold a local patch commit)
+docker compose build api && docker compose build web   # one at a time, 2 GB RAM; web-only changes need only `build web`
 docker compose up -d db redis migrate api web scheduler marketplace-source-worker
 ```
+
+A web rebuild needs about 3 GB of free disk. If `df -h /` shows more than ~80% used, run `docker builder prune -af` first (build cache only; the next build is slower). The `RUN chown -R` step in the Dockerfiles duplicates `node_modules` and makes images large.
 
 ## Notes
 
@@ -32,3 +34,4 @@ docker compose up -d db redis migrate api web scheduler marketplace-source-worke
 ## Log
 
 - 2026-11-01: Deployed v.3 at 49b2e50 (cb55e8b from GitHub plus unpushed commit applied as a patch); 35 migrations applied; public HTTPS checked through Cloudflare.
+- 2026-11-01: Deployed v.3 at ee4eb2b (simplified creator listing editor, web image only, no migrations). Server checkout reset to origin/v.3, replacing the local patch commit 49b2e50 (identical tree to pushed 82a39f3). Disk hit 100% mid-build; fixed with `docker builder prune -af`. Site, /explore and the editor route return 200.
