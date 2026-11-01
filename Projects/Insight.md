@@ -1,7 +1,7 @@
 ---
 type: project
 status: active
-version: Midori Android v0.2.20 (code 31)
+version: Midori Android v0.2.21 (code 32)
 next:
 due:
 repo: https://github.com/SpaaceCowboy/project-insight
@@ -19,7 +19,7 @@ Midori (formerly Insight), a tile-swapping puzzle game. Each colour moves in its
 | Android app (Kotlin + Jetpack Compose) | `Documents\ChatGPT\insight-android\project-insight` |
 | Online backend (TypeScript + PostgreSQL) | `server/` in the Android repo → runs on [[Insight Online]] |
 
-- APK download: https://13.140.89.146/INSIGHT-online.apk?v=0.2.20
+- APK download: https://13.140.89.146/INSIGHT-online.apk?v=0.2.21
 - Private test, no billing, not on the Play Store yet.
 - Release notes: `DEPLOYMENT.md` in the Android repo.
 
@@ -49,3 +49,4 @@ Run Android emulators on [[Insight VPS]] only, never on the local PC (user prefe
 - 2026-10-31: Midori v0.2.19 (code 30) and matching backend deployed: tip text plates and shrink-to-fit lines, continuous player list, adaptive Journey pages, steady discovery cards on refresh, zen streaming ambience and an expanded username word list with 6→g. No migration. VPS checks passed: 61 Android unit tests, the guide/language device regression, signed v0.2.18→v0.2.19 upgrade, 18 server unit and 20 integration tests. Physical-phone checks and the full device suite remain outstanding.
 - 2026-11-01: Web studio now mirrors the app's creator: Build → Target → Preview, app tiles/slots/platform, 185 ms swaps, 320 ms rewind, hold-to-reset, swipe back, resize memory, tips and target mini, plus a final name/append-only placement screen browsing all campaign levels. The Android exporter now ships the whole flat campaign (206 levels, studio levels included) instead of stopping at 200; assets, Kotlin achievements tests and server tests updated. Web `check-editor`, `check-react` and 18 server unit tests pass; Android Gradle tests and APK rebuild still need the VPS.
 - 2026-11-01: Midori v0.2.20 (code 31) and the 206-level campaign asset deployed: six studio levels join Journey (200 → 206), the completion badge becomes "All 206 Journey Puzzles" with earned badges kept, the tips gained a target step, and the game/creator hide the system gesture handle (Android shows its one-time "Viewing full screen" prompt). VPS checks passed: 61 Android unit tests over all 206 solutions, signed v0.2.19→v0.2.20 upgrade keeping preferences, guide and gesture device regressions, 18 server unit and 20 integration tests. Public SHA-256 0509a319…afac304e0.
+- 2026-11-01: Midori v0.2.21 (code 32) published, APK-only (backend untouched, service not restarted): username refusals move to one line under the username box, Login/Create account stays muted until the needed boxes are filled, a puzzle entered from outside a game lifts and settles its board, screens reserve the navigation bar's room while the gesture handle hides, and empty bookmark/follow/created lists lose their placeholder line. Build fix added the `ExperimentalLayoutApi` opt-in; two device tests now read the live screen instead of assuming old geometry. VPS checks passed: 63 unit tests, 22 preview, four compact 360x640/200% checks, signed v0.2.20→v0.2.21 upgrade with identical preferences. Public SHA-256 74ce9112…42174d634. Physical-phone checks remain outstanding.
